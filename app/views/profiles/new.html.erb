@@ -1,0 +1,45 @@
+<h1>New Profile</h1>
+
+<%= form_for @profile do |f| %>
+
+<% if @profile.errors.any? %>
+<div id="errorExplanation">
+  <h2><%= pluralize(@profile.errors.count, "error") %> prohibited
+    this post from being saved:</h2>
+  <ul>
+  <% @profile.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div><%= f.label :first_name %><br />
+  <%= f.text_field :first_name %></div>
+
+  <div><%= f.label :zipcode %><br />
+  <%= f.text_field :zipcode %></div>
+
+  <div><%= f.label :birthday %><br />
+  <%= f.date_select( :birthday, :start_year => 1920 ) %></div>
+
+  <div><%= f.label :weight %> in pounds<br />
+  <%= f.select :weight, (75..350).step(5).to_a  %></div>
+
+  <div><%= f.label :height %> in inches<br />
+  <%= f.select :height, (36..84) %></div>
+
+  <div><%= f.label :bio %><br />
+  <%= f.text_area :bio %></div>
+
+  <div><%= f.label :pets %><br />
+  Yes <%= radio_button("profile", "pets", "true")  %>
+  No <%= radio_button("profile", "pets", "false", {checked: true})  %></div>
+
+  <div><%= f.label :kids %><br />
+	  Yes <%= radio_button("profile", "kids", "true")  %>
+	  No <%= radio_button("profile", "kids", "false", {checked: true})  %></div>
+
+
+  <div><%= f.submit "Create Profile" %></div>
+<% end %>

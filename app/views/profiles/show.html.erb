@@ -1,0 +1,24 @@
+<h1><%= @profile.first_name %></h1>
+
+<p><%= @profile.bio %></p>
+<p>
+<% if @profile.pets %>
+Has pets
+<% else %>
+Doesn't have pets
+<% end %>
+and
+<% if @profile.kids %>
+has kids.
+<% else %>
+doesn't have kids.
+<% end %>
+</p>
+
+<% if current_user.id == @profile.user_id %>
+
+<%= link_to 'Edit Profile', edit_profile_path(@profile), class: "btn"  %>
+
+<%= link_to 'Edit Account', edit_user_registration_path(current_user), class: "btn"  %>
+
+<% end %>

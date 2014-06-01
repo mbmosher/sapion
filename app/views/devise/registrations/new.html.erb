@@ -12,24 +12,7 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :first_name %><br />
-  <%= f.text_field :first_name %></div>
-
-  <div><%= f.label :zipcode %><br />
-  <%= f.text_field :zipcode %></div>
-
-  <div><%= f.label :birthday %><br />
-  <%= f.date_select :birthday %></div>
-
-  <div><%= f.label :weight %><br />
-  <%= f.text_field :weight %></div>
-
-  <div><%= f.label :height %><br />
-  <%= f.text_field :height %></div>
-
-
-
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%= link_to "Back", root_path, class: "btn"  %>
