@@ -8,6 +8,9 @@ Sapion::Application.routes.draw do
   root 'welcome#index'
   
   resources :profiles
+  
+  resources :favorites
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

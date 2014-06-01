@@ -23,6 +23,7 @@ end
 
 def show
   @profile = Profile.find(params[:id])
+  @fav = current_user.favorites.find_by star_id: @profile.id
 end
 
 def edit

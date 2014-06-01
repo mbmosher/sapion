@@ -11495,3 +11495,2779 @@ Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 22:13:21 -07
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 22:13:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateFavorites (20140601053218)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "favorites" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "star_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140601053218"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-05-31 22:49:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered profiles/show.html.erb within layouts/application (1.0ms)
+  [1m[35mProfile Load (0.3ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 249ms (Views: 190.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 22:49:24 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/favorite.css?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/favorite.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 22:49:25 -0700
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-05-31 22:52:47 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered profiles/show.html.erb within layouts/application (0.9ms)
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 107ms (Views: 8.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/favorite.css?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/favorite.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 22:52:48 -0700
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-05-31 22:52:50 -0700
+
+ActionController::RoutingError (uninitialized constant FavoritesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (71.5ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-05-31 22:52:50 -0700
+
+ActionController::RoutingError (uninitialized constant FavoritesController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.8ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-05-31 22:54:00 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 68ms
+
+ActionView::MissingTemplate (Missing template favorites/index, application/index with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views"
+  * "/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.1.1/app/views"
+):
+  actionpack (4.0.0) lib/action_view/path_set.rb:46:in `find'
+  actionpack (4.0.0) lib/action_view/lookup_context.rb:115:in `find'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:35:in `determine_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:433:in `_run__2207497231736206595__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.9ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-05-31 22:54:13 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered favorites/index.html.erb within layouts/application (58.4ms)
+Completed 500 Internal Server Error in 63ms
+
+ActionView::Template::Error (/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/models/favorite.rb:2: syntax error, unexpected ':', expecting keyword_end
+  belongs_to: user
+             ^):
+    1: <h1>Favorites</h1>
+    2: 
+    3: <%= render current_user.favorites %>
+  app/views/favorites/index.html.erb:3:in `_app_views_favorites_index_html_erb___1864450722377369643_70248271217560'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.6ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered favorites/index.html.erb within layouts/application (3.7ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 252ms (Views: 186.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/favorite.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/favorite.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 22:54:57 -0700
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered profiles/show.html.erb within layouts/application (1.8ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 137ms (Views: 70.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered profiles/show.html.erb within layouts/application (1.6ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:29 -0700
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered profiles/show.html.erb within layouts/application (0.4ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 23:03:34 -0700
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:03:37 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `permit' for nil:NilClass):
+  app/controllers/favorites_controller.rb:6:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:10:32 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 74ms
+
+NoMethodError (undefined method `permit' for nil:NilClass):
+  app/controllers/favorites_controller.rb:6:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:11:15 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 36ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:22:43 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 36ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:26:41 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:31:57 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:32:14 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.8ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:32:47 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:33:26 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:39:27 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 35ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.3ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:42:57 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:46:54 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.2ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:47:21 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 37ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.1ms)
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-05-31 23:56:38 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 37ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.6ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 78ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 23:56:49 -0700
+
+
+Started GET "/favorites?class=btn&id=4" for 127.0.0.1 at 2014-05-31 23:56:53 -0700
+Processing by FavoritesController#index as HTML
+  Parameters: {"class"=>"btn", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered favorites/index.html.erb within layouts/application (1.5ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.4ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-31 23:57:17 -0700
+
+
+Started POST "/favorites.4" for 127.0.0.1 at 2014-05-31 23:57:19 -0700
+Processing by FavoritesController#create as 
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.0ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:58:19 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (wrong number of arguments (4 for 0..3)):
+    26: <% if @fav %>
+    27: <%= link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' %>
+    28: <% else %>
+    29: <%= link_to "Add Favorite", favorites_path, {:id => @profile.id}, method: :post, class: 'btn' %>
+    30: <% end %>
+    31: 
+    32: <% end %>
+  app/views/profiles/show.html.erb:29:in `_app_views_profiles_show_html_erb___2694061522591501270_70248272569740'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:58:34 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+ERROR: compiling _app_views_profiles_show_html_erb___2694061522591501270_70248259464680 RAISED /Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected ',', expecting =>
+...Add Favorite", {favorites_path, :id => @profile.id}, method:...
+...                               ^
+/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected '}', expecting ')'
+...rites_path, :id => @profile.id}, method: :post, class: 'btn'...
+...                               ^
+Function body:           def _app_views_profiles_show_html_erb___2694061522591501270_70248259464680(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "profiles/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @profile.first_name );@output_buffer.safe_append='</h1>
+
+<p>';@output_buffer.append=( @profile.bio );@output_buffer.safe_append='</p>
+<p>
+'; if @profile.pets 
+@output_buffer.safe_append='Has pets
+'; else 
+@output_buffer.safe_append='Doesn\'t have pets
+'; end 
+@output_buffer.safe_append='and
+'; if @profile.kids 
+@output_buffer.safe_append='has kids.
+'; else 
+@output_buffer.safe_append='doesn\'t have kids.
+'; end 
+@output_buffer.safe_append='</p>
+
+'; if current_user.id == @profile.user_id 
+@output_buffer.safe_append='
+';@output_buffer.append=( link_to 'Edit Profile', edit_profile_path(@profile), class: "btn"  );@output_buffer.safe_append='
+
+';@output_buffer.append=( link_to 'Edit Account', edit_user_registration_path(current_user), class: "btn"  );@output_buffer.safe_append='
+
+'; else 
+@output_buffer.safe_append='
+'; if @fav 
+@output_buffer.append=( link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' );@output_buffer.safe_append='
+'; else 
+@output_buffer.append=( link_to "Add Favorite", {favorites_path, :id => @profile.id}, method: :post, class: 'btn' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='
+'; end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:433:in `_run__2097851738875397140__process_action__callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered profiles/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected ',', expecting =>
+...Add Favorite", {favorites_path, :id => @profile.id}, method:...
+...                               ^
+/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected '}', expecting ')'
+...rites_path, :id => @profile.id}, method: :post, class: 'btn'...
+...                               ^):
+    26: <% if @fav %>
+    27: <%= link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' %>
+    28: <% else %>
+    29: <%= link_to "Add Favorite", {favorites_path, :id => @profile.id}, method: :post, class: 'btn' %>
+    30: <% end %>
+    31: 
+    32: <% end %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:433:in `_run__2097851738875397140__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-05-31 23:59:25 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+ERROR: compiling _app_views_profiles_show_html_erb___2694061522591501270_70248232695120 RAISED /Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected tIVAR, expecting =>
+...{action: "create", :id @profile.id}, method: :post, class: '...
+...                               ^
+/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected '}', expecting ')'
+...ion: "create", :id @profile.id}, method: :post, class: 'btn'...
+...                               ^
+Function body:           def _app_views_profiles_show_html_erb___2694061522591501270_70248232695120(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "profiles/show";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<h1>';@output_buffer.append=( @profile.first_name );@output_buffer.safe_append='</h1>
+
+<p>';@output_buffer.append=( @profile.bio );@output_buffer.safe_append='</p>
+<p>
+'; if @profile.pets 
+@output_buffer.safe_append='Has pets
+'; else 
+@output_buffer.safe_append='Doesn\'t have pets
+'; end 
+@output_buffer.safe_append='and
+'; if @profile.kids 
+@output_buffer.safe_append='has kids.
+'; else 
+@output_buffer.safe_append='doesn\'t have kids.
+'; end 
+@output_buffer.safe_append='</p>
+
+'; if current_user.id == @profile.user_id 
+@output_buffer.safe_append='
+';@output_buffer.append=( link_to 'Edit Profile', edit_profile_path(@profile), class: "btn"  );@output_buffer.safe_append='
+
+';@output_buffer.append=( link_to 'Edit Account', edit_user_registration_path(current_user), class: "btn"  );@output_buffer.safe_append='
+
+'; else 
+@output_buffer.safe_append='
+'; if @fav 
+@output_buffer.append=( link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' );@output_buffer.safe_append='
+'; else 
+@output_buffer.append=( link_to "Add Favorite", {action: "create", :id @profile.id}, method: :post, class: 'btn' );@output_buffer.safe_append='
+'; end 
+@output_buffer.safe_append='
+'; end ;@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `module_eval'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:299:in `compile'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:248:in `block in compile!'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `synchronize'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:236:in `compile!'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:142:in `block in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:161:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/template.rb:141:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_view/renderer/renderer.rb:23:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:97:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:16:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:189:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:433:in `_run__2097851738875397140__process_action__callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `block in instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/notifications.rb:159:in `instrument'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/base.rb:136:in `process'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/abstract_controller/rendering.rb:44:in `process'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal.rb:195:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_controller/metal.rb:231:in `block in action'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `each'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/journey/router.rb:59:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/routing/route_set.rb:655:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:35:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:34:in `catch'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/warden-1.2.3/lib/warden/manager.rb:34:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/query_cache.rb:36:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activerecord-4.0.0/lib/active_record/migration.rb:369:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:38:in `call_app'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `block in call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/rack/logger.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/activesupport-4.0.0/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/engine.rb:511:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/railties-4.0.0/lib/rails/application.rb:97:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered profiles/show.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected tIVAR, expecting =>
+...{action: "create", :id @profile.id}, method: :post, class: '...
+...                               ^
+/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views/profiles/show.html.erb:29: syntax error, unexpected '}', expecting ')'
+...ion: "create", :id @profile.id}, method: :post, class: 'btn'...
+...                               ^):
+    26: <% if @fav %>
+    27: <%= link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' %>
+    28: <% else %>
+    29: <%= link_to "Add Favorite", {action: "create", :id @profile.id}, method: :post, class: 'btn' %>
+    30: <% end %>
+    31: 
+    32: <% end %>
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `module_eval'
+  actionpack (4.0.0) lib/action_view/template.rb:299:in `compile'
+  actionpack (4.0.0) lib/action_view/template.rb:248:in `block in compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `synchronize'
+  actionpack (4.0.0) lib/action_view/template.rb:236:in `compile!'
+  actionpack (4.0.0) lib/action_view/template.rb:142:in `block in render'
+  activesupport (4.0.0) lib/active_support/notifications.rb:161:in `instrument'
+  actionpack (4.0.0) lib/action_view/template.rb:141:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/template_renderer.rb:17:in `render'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionpack (4.0.0) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:127:in `_render_template'
+  actionpack (4.0.0) lib/action_controller/metal/streaming.rb:219:in `_render_template'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:120:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+  actionpack (4.0.0) lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:97:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+  activesupport (4.0.0) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.0.0) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:433:in `_run__2097851738875397140__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.3ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.7ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:04:18 -0700
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-06-01 00:04:20 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.2ms)
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:23 -0700
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-06-01 00:05:24 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (37.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.7ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.5ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:05:45 -0700
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-06-01 00:05:46 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.1ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.1ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:06:11 -0700
+
+
+Started POST "/favorites" for 127.0.0.1 at 2014-06-01 00:06:12 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE="}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.4ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:07:06 -0700
+
+
+Started POST "/favorites?id=4" for 127.0.0.1 at 2014-06-01 00:07:07 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 2ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/controllers/favorites_controller.rb:7:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (22.4ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.9ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.9ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 71ms (Views: 7.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:10:07 -0700
+
+
+Started POST "/favorites?id=4" for 127.0.0.1 at 2014-06-01 00:10:09 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/favorites_controller.rb:8:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.6ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.0ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 107ms (Views: 7.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:11:34 -0700
+
+
+Started POST "/favorites?id=4" for 127.0.0.1 at 2014-06-01 00:11:35 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+Completed 500 Internal Server Error in 12ms
+
+NoMethodError (undefined method `id' for 4:Fixnum):
+  app/controllers/favorites_controller.rb:12:in `create'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.7ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.2ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.1ms)
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 107ms (Views: 7.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:11 -0700
+
+
+Started POST "/favorites?id=4" for 127.0.0.1 at 2014-06-01 00:12:14 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "favorites" ("created_at", "star_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)[0m  [["created_at", Sun, 01 Jun 2014 07:12:14 UTC +00:00], ["star_id", 4], ["updated_at", Sun, 01 Jun 2014 07:12:14 UTC +00:00], ["user_id", 1]]
+  [1m[35m (7.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/profiles/4
+Completed 302 Found in 129ms (ActiveRecord: 9.2ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.5ms)
+  [1m[35mProfile Load (0.3ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:15 -0700
+
+
+Started DELETE "/favorites/1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+Processing by FavoritesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"1"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."id" = ? LIMIT 1  [["user_id", 1], ["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "favorites" WHERE "favorites"."id" = ?  [["id", 1]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/favorites
+Completed 302 Found in 10ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered collection (0.0ms)
+  Rendered favorites/index.html.erb within layouts/application (1.2ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:21 -0700
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-06-01 00:12:25 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 5 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (1.2ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profiles/3" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"3"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 3 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.8ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:29 -0700
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.4ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:32 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:33 -0700
+
+
+Started POST "/favorites?id=4" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+Processing by FavoritesController#create as HTML
+  Parameters: {"authenticity_token"=>"Viy7n3qdNEJ77kfysjlRTxZhVBPCS34uHa3MnS8AcqE=", "id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "favorites" ("created_at", "star_id", "updated_at", "user_id") VALUES (?, ?, ?, ?)  [["created_at", Sun, 01 Jun 2014 07:12:37 UTC +00:00], ["star_id", 4], ["updated_at", Sun, 01 Jun 2014 07:12:37 UTC +00:00], ["user_id", 1]]
+  [1m[36m (6.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/profiles/4
+Completed 302 Found in 11ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.4ms)
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:12:37 -0700
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:12:39 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered favorites/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (Missing partial favorites/favorite with {:locale=>[:en], :formats=>[:html, :xml], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views"
+  * "/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.1.1/app/views"
+):
+    1: <h1>Favorites</h1>
+    2: 
+    3: <%= render current_user.favorites %>
+  app/views/favorites/index.html.erb:3:in `_app_views_favorites_index_html_erb___1864450722377369643_70248240041900'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.1ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:12:39 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered favorites/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (Missing partial favorites/favorite with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Volumes/RINZLER/matthewmosher/Documents/RubyCode/sapion/app/views"
+  * "/Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/devise-3.1.1/app/views"
+):
+    1: <h1>Favorites</h1>
+    2: 
+    3: <%= render current_user.favorites %>
+  app/views/favorites/index.html.erb:3:in `_app_views_favorites_index_html_erb___1864450722377369643_70248271217560'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.0ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:15:06 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered favorites/index.html.erb within layouts/application (39.6ms)
+Completed 500 Internal Server Error in 43ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=4):
+  app/views/favorites/index.html.erb:4:in `block in _app_views_favorites_index_html_erb___1864450722377369643_70248273039000'
+  app/views/favorites/index.html.erb:3:in `_app_views_favorites_index_html_erb___1864450722377369643_70248273039000'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:15:25 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered favorites/index.html.erb within layouts/application (2.0ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:15:26 -0700
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:21:07 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 31ms
+
+NoMethodError (undefined method `[]' for nil:NilClass):
+  app/controllers/favorites_controller.rb:27:in `index'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.9ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (48.2ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:21:25 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered favorites/index.html.erb within layouts/application (47.8ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (undefined method `Link_to' for #<#<Class:0x007fc7e50b9000>:0x007fc7e50b80d8>):
+    1: <h1>Favorites</h1>
+    2: 
+    3: <% @favs.each do |fav| %>
+    4: 	<%= Link_to fav.first_name,  profile_path(@fav) %></br>
+    5: 	<% end %>
+  app/views/favorites/index.html.erb:4:in `block in _app_views_favorites_index_html_erb___1864450722377369643_70248259000040'
+  app/views/favorites/index.html.erb:3:in `each'
+  app/views/favorites/index.html.erb:3:in `_app_views_favorites_index_html_erb___1864450722377369643_70248259000040'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.3ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered favorites/index.html.erb within layouts/application (0.8ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:21:47 -0700
+
+
+Started GET "/profiles/" for 127.0.0.1 at 2014-06-01 00:21:49 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ProfilesController):
+  actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/profiles/" for 127.0.0.1 at 2014-06-01 00:21:49 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ProfilesController):
+  actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.5ms)
+
+
+Started GET "/profiles/" for 127.0.0.1 at 2014-06-01 00:22:46 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ProfilesController):
+  actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/profiles/" for 127.0.0.1 at 2014-06-01 00:22:46 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for ProfilesController):
+  actionpack (4.0.0) lib/abstract_controller/base.rb:131:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `catch'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1830456889882002265__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Volumes/RINZLER/matthewmosher/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Volumes/RINZLER/matthewmosher/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (0.4ms)
+
+
+Started GET "/favorites" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+Processing by FavoritesController#index as HTML
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mFavorite Load (0.1ms)[0m  SELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered favorites/index.html.erb within layouts/application (0.8ms)
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/favorites.css?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/favorites.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-01 00:22:50 -0700
+
+
+Started GET "/profiles/4" for 127.0.0.1 at 2014-06-01 00:22:51 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+Geokit is using the domain: localhost
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 4 LIMIT 1[0m  [["user_id", 1]]
+  Rendered profiles/show.html.erb within layouts/application (0.6ms)
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.5ms)

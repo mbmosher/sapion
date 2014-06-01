@@ -21,4 +21,12 @@ doesn't have kids.
 
 <%= link_to 'Edit Account', edit_user_registration_path(current_user), class: "btn"  %>
 
+<% else %>
+
+<% if @fav %>
+<%= link_to "Remove Favorite", favorite_path(@fav), method: :delete, class: 'btn' %>
+<% else %>
+<%= link_to "Add Favorite", {controller: "favorites", id: @profile.id}, method: :post, class: 'btn' %>
+<% end %>
+
 <% end %>
