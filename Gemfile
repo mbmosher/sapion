@@ -47,3 +47,7 @@ end
 gem 'devise'
 
 gem 'geokit-rails'
+
+gem 'carrierwave'
+
+gem 'mini_magick'

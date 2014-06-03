@@ -1,5 +1,11 @@
 <h1><%= @profile.first_name %></h1>
 
+<p>
+
+<%= image_tag(@profile.avatar.url) %>
+
+</p>
+
 <p><%= @profile.bio %></p>
 <p>
 <% if @profile.pets %>
