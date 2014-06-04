@@ -8,13 +8,15 @@
 </head>
 <body>
 	
-<div class="container-fluid">
+<div class="container">
 	
 	<div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-    <a href="#" class="brand">Sapion</a>
+	<div class="container">
+    <%= link_to "Sapion", root_path, class: 'brand'  %>
     <% if user_signed_in? %>
     <ul class="nav">
+	<li class="divider-vertical"></li>
 	<% if current_user.profile %>
     <li><%= link_to "My Profile", profile_path(current_user.profile)  %></li>
     <% else %>
@@ -22,30 +24,46 @@
     <% end %>
     <li><a href="#">Search</a></li>
     <li><%= link_to "Favorites", favorites_path  %></li>
-    <li><a href="#">Conversations</a></li>
+    <li><%= link_to "Conversations", conversations_path  %></li>
     </ul>
     <ul class="nav pull-right">
+	<li class="divider-vertical"></li>
     <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
     </ul>
     <% else %>
     <ul class="nav pull-right">
+	<li class="divider-vertical"></li>
     <li><%= link_to "Sign up", new_user_registration_path  %></li>
     <li><%= link_to "Login", new_user_session_path  %></li>
     </ul>
     <% end %>
     </div>
     </div>
+    </div>
 
-<div class="span10">
+<div>
 
 <%= yield %>
 
 </div>
 
-<div class="span2">
-	
+<div class="navbar navbar-inverse navbar-fixed-bottom">
+<div class="navbar-inner">
+<div class="container">	
+	<%= link_to "Sapion", root_path, class: 'brand'  %>
+<ul class="nav">
+	<li class="divider-vertical"></li>
+	<li><a href="#">FAQ</a></li>
+	<li><a href="#">Support</a></li>
+</ul>
+<ul class="nav pull-right">
+	<li class="divider-vertical"></li>
+	<li><a href="http://matthewmosher.us">©2014 Matthew Mosher</a></li>
+</ul>
 </div>
-	
+</div>
+</div>
+
 	
 </div>
 </body>

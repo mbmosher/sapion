@@ -31,7 +31,7 @@
 
   <div><%= f.label :gender %><br />
   Male <%= radio_button("profile", "gender", "male")  %>
-  Female <%= radio_button("profile", "pets", "female")  %></div>
+  Female <%= radio_button("profile", "gender", "female", {checked: true})  %></div>
 
   <div><%= f.label :bio %><br />
   <%= f.text_area :bio %></div>

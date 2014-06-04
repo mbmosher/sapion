@@ -1,0 +1,7 @@
+<h1>Conversations</h1>
+
+<% @mycons.each do |chat| %>
+	<p>
+	<%= link_to "Conversation", conversation_path(chat) %> between <%= chat.users.first.profile.first_name %> and <%= chat.users.last.profile.first_name %>
+	</p>
+<% end %>

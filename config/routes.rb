@@ -1,4 +1,6 @@
 Sapion::Application.routes.draw do
+  get "conversation/create"
+  get "conversation/show"
   devise_for :users
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
@@ -8,6 +10,10 @@ Sapion::Application.routes.draw do
   root 'welcome#index'
   
   resources :profiles
+  
+  resources :conversations do
+    resources :messages
+  end
   
   resources :favorites
   

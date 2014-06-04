@@ -1,5 +1,8 @@
 <h1>Favorites</h1>
 
 <% @favs.each do |fav| %>
-	<%= link_to fav.first_name,  profile_path(fav) %></br>
+    <p>
+    <%= image_tag(fav.avatar.thumb.url) %>
+	<%= link_to fav.first_name,  profile_path(fav) %>
+	</p>
 	<% end %>

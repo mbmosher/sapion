@@ -1,0 +1,21 @@
+<h1>Messages</h1>
+
+<%= form_for([@converse, @converse.messages.build]) do |f| %>
+  <div class="form-inline">
+    New Message
+    <%= f.text_area :text, class: "span4" %>
+    <%= f.submit "Send", class: 'btn' %>
+  </div>
+<% end %>
+
+<% @converse.messages.order(created_at: :desc).each do |mess| %>
+  <% if mess.text %>
+	<p>
+		<%= image_tag(mess.user.profile.avatar.thumb.url) %>
+		<strong><%= link_to mess.user.profile.first_name,  profile_path(mess.user.profile) %>:</strong>
+		<%= mess.text%>
+	</p>
+  <% end %>
+<% end %>
+	
+<%= link_to "Delete Conversation", conversation_path(@converse), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn' %>
