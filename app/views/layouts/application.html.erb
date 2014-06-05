@@ -22,7 +22,11 @@
     <% else %>
     <li><%= link_to "New Profile", new_profile_path  %></li>
     <% end %>
-    <li><a href="#">Search</a></li>
+	<% if current_user.search %>
+    <li><%= link_to "Search", edit_search_path(current_user.search)  %></li>
+    <% else %>
+    <li><%= link_to "Search", new_search_path  %></li>
+    <% end %>
     <li><%= link_to "Favorites", favorites_path  %></li>
     <li><%= link_to "Conversations", conversations_path  %></li>
     </ul>
@@ -52,6 +56,7 @@
 <div class="container">	
 	<%= link_to "Sapion", root_path, class: 'brand'  %>
 <ul class="nav">
+	<li class="navbar-text">Augmented dating for thoughtful people</li>
 	<li class="divider-vertical"></li>
 	<li><a href="#">FAQ</a></li>
 	<li><a href="#">Support</a></li>

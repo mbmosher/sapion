@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  gender: MyString
+  minage: 1
+  maxage: 1
+  minweight: 1
+  maxweight: 1
+  minheight: 1
+  maxheight: 1
+  pets: false
+  kids: false
+
+two:
+  gender: MyString
+  minage: 1
+  maxage: 1
+  minweight: 1
+  maxweight: 1
+  minheight: 1
+  maxheight: 1
+  pets: false
+  kids: false

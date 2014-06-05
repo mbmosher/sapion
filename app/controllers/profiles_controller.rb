@@ -32,12 +32,17 @@ end
 
 def update
 	@profile = Profile.find(params[:id])
-	
 	if @profile.update(profile_params)
 		redirect_to @profile
 	else
 		render 'edit'
 	end
+end
+
+def destroy
+  @profilee = Profile.find(params[:id])
+  @profile.destroy
+  redirect_to welcome_path
 end
 
 private

@@ -1,0 +1,48 @@
+<h1>Looking for someone?</h1>
+
+<%= form_for @search do |f| %>
+
+<% if @search.errors.any? %>
+<div id="errorExplanation">
+  <h2><%= pluralize(@search.errors.count, "error") %> prohibited
+    this post from being saved:</h2>
+  <ul>
+  <% @search.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <p>I am looking for
+  <%= radio_button("profile", "gender", "male")  %> Men
+  <%= radio_button("profile", "gender", "female")  %> Women
+  <%= radio_button("profile", "gender", "both", {checked: true})  %> Both</p>
+
+  <p>Who
+  <%= radio_button("profile", "pets", "true")  %> have pets
+  <%= radio_button("profile", "pets", "false")  %> don't have pets
+  <%= radio_button("profile", "pets", "false", {checked: true})  %> both</p>
+
+  <p>Who
+	  <%= radio_button("profile", "kids", "true")  %> have kids
+	  <%= radio_button("profile", "kids", "false")  %> don't have kids
+	  <%= radio_button("profile", "kids", "false", {checked: true})  %> both</p>
+	
+	<p>Who live within
+	<%= f.select :distance, (0..25).step(5).to_a, {}, class: 'span1' %> miles of me</p>
+	
+	<p>Who are between
+	<%= f.select :minage, (18..70).step(2).to_a, {}, class: 'span1' %> and 
+	<%= f.select :maxage, (18..70).step(2).to_a.reverse, {}, class: 'span1' %> years old</p>
+	
+	<p>Who are between 
+	<%= f.select :minheight, (48..84), {}, class: 'span1' %> and 
+	<%= f.select :maxheight, (48..84).to_a.reverse, {}, class: 'span1' %> inches tall</p>
+	
+	<p>Who weigh between 
+	<%= f.select :minweight, (90..300).step(5).to_a, {}, class: 'span1' %> and 
+	<%= f.select :maxweight, (90..300).step(5).to_a.reverse, {}, class: 'span1' %> pounds</p>
+
+  <div><%= f.submit "Find Matches!", class: 'btn' %></div>
+<% end %>

@@ -1,4 +1,8 @@
+<% if current_user.profile == @profile%>
+<h1>My Profile</h1>
+<% else %>
 <h1><%= @profile.first_name %></h1>
+<% end %>
 
 <div class="row">
 <p class="span8">

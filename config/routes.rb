@@ -15,6 +15,8 @@ Sapion::Application.routes.draw do
     resources :messages
   end
   
+  resources :searches
+  
   resources :favorites
   
 

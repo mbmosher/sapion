@@ -13,4 +13,11 @@ class MessagesController < ApplicationController
     @message.save
     redirect_to conversation_path(@conversation)
   end
+  
+  def destroy
+    @message = Message.find(params[:id])
+    @message.destroy
+    redirect_to conversations_path
+  end
+  
 end

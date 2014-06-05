@@ -1,0 +1,8 @@
+<h1>Matches</h1>
+
+<% @profiles.each do |prof| %>
+    <p>
+    <%= image_tag(prof.avatar.thumb.url) %>
+	<%= link_to prof.first_name,  profile_path(prof) %>
+	</p>
+	<% end %>
