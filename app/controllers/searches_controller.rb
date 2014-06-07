@@ -30,6 +30,7 @@ class SearchesController < ApplicationController
     @kids = []
     @ages = []
     today = Date.today
+    @orient = []
     
     # SQL filter by height and weight
     @profiles = Profile.where(:height => h, :weight => w)
@@ -37,6 +38,28 @@ class SearchesController < ApplicationController
     # Filter by distance...
     
     # Filter by orientation...
+    if current_user.profile.orientation == 'H'
+      @profiles.each do |p|
+        if p.gender != current_user.profile.gender && (p.orientation == 'H' || p.orientation == 'B')
+          @orient << p
+        end
+      end
+    end
+    if current_user.profile.orientation == 'G'
+      @profiles.each do |p|
+        if p.gender == current_user.profile.gender && (p.orientation == 'G' || p.orientation == 'B')
+          @orient << p
+        end
+      end
+    end
+    if current_user.profile.orientation == 'B'
+      @profiles.each do |p|
+        if p.orientation == 'B' || (p.orientation == 'G' && p.gender == current_user.profile.gender) || (p.orientation == 'H' && p.gender != current_user.profile.gender)
+          @orient << p
+        end
+      end
+    end
+    @profiles = @orient
     
     # Filter by age range
     @profiles.each do |p|

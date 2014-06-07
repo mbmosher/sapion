@@ -14,22 +14,15 @@
 </div>
 <% end %>
 
-  <p>I am looking for
-  <%= radio_button("profile", "gender", "male")  %> Men
-  <%= radio_button("profile", "gender", "female")  %> Women
-  <%= radio_button("profile", "gender", "both", {checked: true})  %> Both</p>
+  <p>I am looking for people:</p>
 
   <p>Who
-  <%= radio_button("profile", "pets", "true")  %> have pets
-  <%= radio_button("profile", "pets", "false")  %> don't have pets
-  <%= radio_button("profile", "pets", "false", {checked: true})  %> both</p>
+  <%= f.select :pets, [['might have pets', 'both'],['have pets', true],['have no pets', false]] %></p>
 
   <p>Who
-	  <%= radio_button("profile", "kids", "true")  %> have kids
-	  <%= radio_button("profile", "kids", "false")  %> don't have kids
-	  <%= radio_button("profile", "kids", "false", {checked: true})  %> both</p>
+  <%= f.select :kids, [['might have kids', 'both'],['have kids', true],['have no kids', false]]%></p>
 	
-	<p>Who live within
+	<p>Who livs within
 	<%= f.select :distance, (0..25).step(5).to_a, {}, class: 'span1' %> miles of me</p>
 	
 	<p>Who are between

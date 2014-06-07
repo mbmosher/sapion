@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140604214123) do
+ActiveRecord::Schema.define(version: 20140607032915) do
 
   create_table "conversations", force: true do |t|
     t.datetime "created_at"
@@ -58,6 +58,9 @@ ActiveRecord::Schema.define(version: 20140604214123) do
     t.integer  "user_id"
     t.string   "gender"
     t.string   "avatar"
+    t.string   "orientation"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   create_table "searches", force: true do |t|

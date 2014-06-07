@@ -51,3 +51,5 @@ gem 'geokit-rails'
 gem 'carrierwave'
 
 gem 'mini_magick'
+
+gem 'geocoder'

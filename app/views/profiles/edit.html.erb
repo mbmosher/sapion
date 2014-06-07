@@ -26,25 +26,28 @@
   <%= f.date_select( :birthday, :start_year => 1920 ) %></div>
 
   <div><%= f.label :weight %> in pounds<br />
-  <%= f.text_field :weight %></div>
+  <%= f.select :weight, (75..350).step(5).to_a  %></div>
 
   <div><%= f.label :height %> in inches<br />
-  <%= f.text_field :height %></div>
+  <%= f.select :height, (36..84) %></div>
 
   <div><%= f.label :gender %><br />
-  Male <%= radio_button("profile", "gender", "male")  %>
-  Female <%= radio_button("profile", "gender", "female", {checked: true})  %></div>
+  Male <%= radio_button("profile", "gender", "M")  %>
+  Female <%= radio_button("profile", "gender", "F")  %></div>
+
+  <div><%= f.label :orientation %><br />
+  <%= f.select :orientation, [['Bisexual', 'B'],['Hederosexual', 'H'],['Homosexual', 'G']] %></div>
 
   <div><%= f.label :bio %><br />
   <%= f.text_area :bio %></div>
 
   <div><%= f.label :pets %><br />
   Yes <%= radio_button("profile", "pets", "true")  %>
-  No <%= radio_button("profile", "pets", "false", {checked: true})  %></div>
+  No <%= radio_button("profile", "pets", "false")  %></div>
 
   <div><%= f.label :kids %><br />
 	  Yes <%= radio_button("profile", "kids", "true")  %>
-	  No <%= radio_button("profile", "kids", "false", {checked: true})  %></div>
+	  No <%= radio_button("profile", "kids", "false")  %></div>
 	
 	  <div><%= f.label :avatar %><br />
 	  <%= image_tag(@profile.avatar.thumb.url) %>
