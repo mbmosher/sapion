@@ -1,11 +1,14 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
-
+<div class="text-center">
+	<br />
+<h1>Welcome to Sapion</h1>
+<br />
+<p class="lead span8 offset2">Rooted in compassion, Sapion provides a way to initiate new meaningful dating relationships with those around you.  To support thoughtful dialog between people, profiles are presented in a minimal way, and participants can only initiate one new conversation each day.  Speak wisely!
+<br /><br />
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.email %></strong>.<br><br>
-  <%= link_to 'Edit profile', edit_user_registration_path, class: "btn btn-primary btn-large" %> 
-  <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "btn btn-primary btn-large"  %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-large"  %> 
   <%= link_to "Login", new_user_session_path, class: "btn btn-primary btn-large"  %>
 <% end %>
+</p>
+</div>

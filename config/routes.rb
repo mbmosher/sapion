@@ -19,6 +19,9 @@ Sapion::Application.routes.draw do
   
   resources :favorites
   
+  get 'faq' => 'welcome#faq'
+  get 'support' => 'welcome#support'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

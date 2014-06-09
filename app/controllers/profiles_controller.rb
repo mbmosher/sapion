@@ -32,6 +32,11 @@ end
 
 def update
 	@profile = Profile.find(params[:id])
+	
+	cords = coordinates(@profile.zipcode.to_s)
+	@profile.latitude = cords.first
+	@profile.longitude = cords.last
+	
 	if @profile.update(profile_params)
 		redirect_to @profile
 	else

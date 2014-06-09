@@ -22,7 +22,7 @@
   <p>Who
   <%= f.select :kids, [['might have kids', 'both'],['have kids', true],['have no kids', false]]%></p>
 	
-	<p>Who livs within
+	<p>Who lives within
 	<%= f.select :distance, (0..25).step(5).to_a, {}, class: 'span1' %> miles of me</p>
 	
 	<p>Who are between

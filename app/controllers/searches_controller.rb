@@ -31,11 +31,21 @@ class SearchesController < ApplicationController
     @ages = []
     today = Date.today
     @orient = []
+    @dist = []
     
     # SQL filter by height and weight
     @profiles = Profile.where(:height => h, :weight => w)
     
     # Filter by distance...
+    @profiles.each do |p|
+      distance = Geocoder::Calculations.distance_between([p.latitude,p.longitude], [current_user.profile.latitude,current_user.profile.longitude])
+      # distance = p.distance_to(current_user.profile)
+      if distance <= @search.distance
+        @dist << p
+      end
+    end
+    
+    # @dist = current_user.profile.nearbys(@search.distance)
     
     # Filter by orientation...
     if current_user.profile.orientation == 'H'
