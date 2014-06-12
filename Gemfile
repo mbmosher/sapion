@@ -46,10 +46,10 @@ end
 
 gem 'devise'
 
-gem 'geokit-rails'
-
 gem 'carrierwave'
 
 gem 'mini_magick'
 
 gem 'geocoder'
+
+gem 'acts-as-taggable-on'

@@ -4,5 +4,6 @@
     <p>
     <%= image_tag(fav.avatar.thumb.url) %>
 	<%= link_to fav.first_name,  profile_path(fav) %>
+	<%= fav.tagline %>
 	</p>
 	<% end %>

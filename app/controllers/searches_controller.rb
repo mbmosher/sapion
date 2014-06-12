@@ -1,5 +1,7 @@
 class SearchesController < ApplicationController
   
+  before_action :authenticate_user!
+  
   def new
     @search = Search.new
   end
@@ -26,31 +28,34 @@ class SearchesController < ApplicationController
     h = (@search.minheight..@search.maxheight)
     w = (@search.minweight..@search.maxweight)
     a = (@search.minage..@search.maxage)
+    t = true
     @pets = []
     @kids = []
     @ages = []
     today = Date.today
     @orient = []
     @dist = []
+    @myage = today.year - current_user.profile.birthday.year 
     
     # SQL filter by height and weight
-    @profiles = Profile.where(:height => h, :weight => w)
+    @profiles = Profile.where(:single => true, :height => h, :weight => w)
     
     # Filter by distance...
-    @profiles.each do |p|
-      distance = Geocoder::Calculations.distance_between([p.latitude,p.longitude], [current_user.profile.latitude,current_user.profile.longitude])
+    # @profiles.each do |p|
+      # distance = Geocoder::Calculations.distance_between([p.latitude,p.longitude], [current_user.profile.latitude,current_user.profile.longitude])
       # distance = p.distance_to(current_user.profile)
-      if distance <= @search.distance
-        @dist << p
-      end
-    end
-    
+      # if distance <= @search.distance
+        # @dist << p
+      # end
+    # end
     # @dist = current_user.profile.nearbys(@search.distance)
+    @dist = @profiles.near(current_user.profile.zipcode, @search.distance)
+    @profiles = @dist
     
     # Filter by orientation...
-    if current_user.profile.orientation == 'H'
+    if current_user.profile.orientation == 'S'
       @profiles.each do |p|
-        if p.gender != current_user.profile.gender && (p.orientation == 'H' || p.orientation == 'B')
+        if p.gender != current_user.profile.gender && (p.orientation == 'S' || p.orientation == 'B')
           @orient << p
         end
       end
@@ -64,7 +69,7 @@ class SearchesController < ApplicationController
     end
     if current_user.profile.orientation == 'B'
       @profiles.each do |p|
-        if p.orientation == 'B' || (p.orientation == 'G' && p.gender == current_user.profile.gender) || (p.orientation == 'H' && p.gender != current_user.profile.gender)
+        if p.orientation == 'B' || (p.orientation == 'G' && p.gender == current_user.profile.gender) || (p.orientation == 'S' && p.gender != current_user.profile.gender)
           @orient << p
         end
       end
@@ -74,8 +79,14 @@ class SearchesController < ApplicationController
     # Filter by age range
     @profiles.each do |p|
       age = today.year - p.birthday.year 
-      if age > @search.minage && age < @search.maxage
-        @ages << p
+      if age > @search.minage && age < @search.maxage 
+        if p.agelimit > 0
+          if @myage < age + p.agelimit && @myage > age - p.agelimit
+            @ages << p
+          end
+        else
+          @ages << p
+        end
       end
     end
     @profiles = @ages

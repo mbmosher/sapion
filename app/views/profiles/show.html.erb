@@ -3,6 +3,7 @@
 <% else %>
 <h1><%= @profile.first_name %></h1>
 <% end %>
+<p><%= @profile.tagline %></p>
 
 <div class="row">
 <p class="span8">
@@ -22,6 +23,9 @@ has kids.
 doesn't have kids.
 <% end %>
 </p>
+<p>Likes: <%= @profile.like_list %></p>
+<p>Disikes: <%= @profile.dislike_list %></p>
+	
 </div>
 
 <% if current_user.id == @profile.user_id %>
@@ -39,7 +43,15 @@ doesn't have kids.
 <%= link_to "Add Favorite", {controller: "favorites", id: @profile.id}, method: :post, class: 'btn' %>
 <% end %>
 
+<% if @con %>
+<%= link_to "See Conversation", conversation_path(@con), class: 'btn' %>
+<% else %>
+<% if @newcon %>
 <%= link_to "Start a Conversation!", {controller: "conversations", id: @profile.id}, method: :post, class: 'btn' %>
+<% else %>
+<a href="#" class="btn disabled">Give it a day!</a>
+<% end %>
+<% end %>
 
 </p>
 </div>

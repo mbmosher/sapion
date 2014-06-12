@@ -14,6 +14,10 @@ class ConversationsController < ApplicationController
   def create
     @profile = Profile.find(params[:id])
     
+    if current_user.conversations.last && DateTime.now - 24.hours > current_user.conversations.last.created_at
+      redirect_to profile_path(@profile)
+    end
+    
     @converse = Conversation.new()
     @converse.initiator = current_user.id
     @converse.mark = @profile.user_id

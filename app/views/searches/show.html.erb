@@ -1,8 +1,14 @@
 <h1>Matches</h1>
 
+<%= link_to "Edit Filters", edit_search_path(@search), class: 'btn' %>
+<br /><br />
+
 <% @profiles.each do |prof| %>
     <p>
     <%= image_tag(prof.avatar.thumb.url) %>
 	<%= link_to prof.first_name,  profile_path(prof) %>
+	<%= prof.tagline %>
 	</p>
 	<% end %>
+	
+	

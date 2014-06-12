@@ -36,16 +36,29 @@
   Female <%= radio_button("profile", "gender", "F")  %></div>
 
   <div><%= f.label :orientation %><br />
-  <%= f.select :orientation, [['Bisexual', 'B'],['Hederosexual', 'H'],['Homosexual', 'G']] %></div>
+  <%= f.select :orientation, [['Bisexual', 'B'],['Heterosexual', 'S'],['Homosexual', 'G']] %></div>
+
+  <div><%= f.label :tagline %><br />
+  <%= f.text_field :tagline %></div>
 
   <div><%= f.label :bio %><br />
   <%= f.text_area :bio %></div>
 
-  <div><%= f.label :pets %><br />
+  <div><%= f.label :like_list, "Things you like - activities, hobbies, foods, movies, books, interests, you name it! (separated by commas)" %><br />
+  <%= f.text_field :like_list %></div>
+
+  <div><%= f.label :dislike_list, "Things you don't like (separated by commas)" %><br />
+  <%= f.text_field :dislike_list %></div>
+
+  <div><%= f.label :single, "Are you single?" %><br />
+  Yes <%= radio_button("profile", "single", "true")  %>
+  No <%= radio_button("profile", "single", "false")  %></div>
+
+  <div><%= f.label :pets, "Do you have pets?" %><br />
   Yes <%= radio_button("profile", "pets", "true")  %>
   No <%= radio_button("profile", "pets", "false")  %></div>
 
-  <div><%= f.label :kids %><br />
+  <div><%= f.label :kids, "Do you have children?" %><br />
 	  Yes <%= radio_button("profile", "kids", "true")  %>
 	  No <%= radio_button("profile", "kids", "false")  %></div>
 	
@@ -55,7 +68,13 @@
       Remove Photo
       <%= f.check_box :remove_avatar %>
 	  <%= f.hidden_field :avatar_cache %></div>
-
+	
+	<br />	
+	We automatically filter match results to people within 50 miles of you.  If you would also like to set a limit on the age of people who can view your profile, do so here.
+	<br />
+	<div><%= f.label :agelimit, "Only show my profile to people withing this many years of my age" %><br />
+  <%= f.text_field :agelimit %></div>
+	<br />
 
   <div><%= f.submit "Edit Profile", class: 'btn' %></div>
 <% end %>

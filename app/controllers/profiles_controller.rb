@@ -1,6 +1,8 @@
 class ProfilesController < ApplicationController
   
   before_action :authenticate_user!
+  
+  require 'date'
 
 def new
   @profile = Profile.new
@@ -10,6 +12,9 @@ end
 
 def create
   @profile = Profile.new(profile_params)
+  cords = Geocoder.coordinates(@profile.zipcode.to_s)
+	@profile.latitude = cords.first
+	@profile.longitude = cords.last
   @profile.user_id = current_user.id
   @profile.rank = 0
   @profile.subscribed = false
@@ -24,6 +29,22 @@ end
 def show
   @profile = Profile.find(params[:id])
   @fav = current_user.favorites.find_by star_id: @profile.id
+  @con = nil
+  current_user.conversations.each do |convo|
+    if convo.initiator == @profile.user_id || convo.mark == @profile.user_id
+      @con = convo
+    end
+  end
+  if current_user.conversations.last
+    if DateTime.now - 24.hours > current_user.conversations.last.created_at
+      @newcon = true
+    else
+      @newcon = false
+    end
+  else
+    @newcon = true
+  end
+  
 end
 
 def edit
@@ -33,7 +54,7 @@ end
 def update
 	@profile = Profile.find(params[:id])
 	
-	cords = coordinates(@profile.zipcode.to_s)
+	cords = Geocoder.coordinates(@profile.zipcode.to_s)
 	@profile.latitude = cords.first
 	@profile.longitude = cords.last
 	
@@ -53,7 +74,7 @@ end
 private
 
 def profile_params
-  params.require(:profile).permit(:first_name, :zipcode, :height, :weight, :bio, :kids, :pets, :birthday, :avatar, :gender, :orientation)
+  params.require(:profile).permit(:first_name, :agelimit, :zipcode, :height, :weight, :bio, :kids, :pets, :birthday, :avatar, :gender, :orientation, :like_list, :dislike_list, :single, :tagline)
 end
 
 end

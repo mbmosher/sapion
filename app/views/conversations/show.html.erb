@@ -1,5 +1,7 @@
 <h1>Messages</h1>
 
+<% if current_user.id == @converse.initiator || current_user.id == @converse.mark %>
+
 <%= form_for([@converse, @converse.messages.build]) do |f| %>
   <div class="form-inline">
     New Message
@@ -19,3 +21,7 @@
 <% end %>
 	
 <%= link_to "Delete Conversation", conversation_path(@converse), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn' %>
+
+<% else %>
+<p>That's not your conversation!</p>
+<% end %>
