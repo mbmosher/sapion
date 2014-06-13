@@ -51895,3 +51895,90 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-12 15:47:04
 
 
 Started GET "/assets/fallback/default.png" for 127.0.0.1 at 2014-06-12 15:47:04 -0700
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-06-12 16:47:28 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 5 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mConversation Load (0.1ms)[0m  SELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'likes' AND taggings.tagger_id IS NULL)  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'dislikes' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  Rendered profiles/show.html.erb within layouts/application (9.5ms)
+  [1m[35mSearch Load (0.1ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 314ms (Views: 86.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/profiles/5/edit" for 127.0.0.1 at 2014-06-12 17:08:12 -0700
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'likes' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'dislikes' AND taggings.tagger_id IS NULL)  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  Rendered profiles/edit.html.erb within layouts/application (16.4ms)
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mSearch Load (0.1ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-06-12 18:33:17 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 5 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mConversation Load (0.1ms)[0m  SELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'likes' AND taggings.tagger_id IS NULL)  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'dislikes' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  Rendered profiles/show.html.erb within layouts/application (4.2ms)
+  [1m[35mSearch Load (0.1ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 121ms (Views: 116.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/searches/1" for 127.0.0.1 at 2014-06-12 18:36:17 -0700
+Processing by SearchesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSearch Load (0.2ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+  [1m[36mProfile Load (0.2ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProfile Load (0.5ms)[0m  SELECT profiles.*, (69.09332411348201 * ABS(profiles.latitude - 33.4366655) * 0.7071067811865475) + (59.836573914187355 * ABS(profiles.longitude - -111.9403254) * 0.7071067811865475) AS distance, CASE WHEN (profiles.latitude >= 33.4366655 AND profiles.longitude >= -111.9403254) THEN 45.0 WHEN (profiles.latitude < 33.4366655 AND profiles.longitude >= -111.9403254) THEN 135.0 WHEN (profiles.latitude < 33.4366655 AND profiles.longitude < -111.9403254) THEN 225.0 WHEN (profiles.latitude >= 33.4366655 AND profiles.longitude < -111.9403254) THEN 315.0 END AS bearing FROM "profiles" WHERE "profiles"."single" = 't' AND ("profiles"."height" BETWEEN 60 AND 68) AND ("profiles"."weight" BETWEEN 90 AND 205) AND (profiles.latitude BETWEEN 33.07483604222288 AND 33.798494957777116 AND profiles.longitude BETWEEN -112.37391610475115 AND -111.50673469524887) ORDER BY distance ASC
+  Rendered searches/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 804ms (Views: 13.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/fallback/match_default.png" for 127.0.0.1 at 2014-06-12 18:36:18 -0700
+
+
+Started GET "/profiles/6" for 127.0.0.1 at 2014-06-12 18:36:27 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mFavorite Load (0.2ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 6 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mConversation Load (0.2ms)[0m  SELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'likes' AND taggings.tagger_id IS NULL)  [["taggable_id", 6], ["taggable_type", "Profile"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'dislikes' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 6], ["taggable_type", "Profile"]]
+  Rendered profiles/show.html.erb within layouts/application (6.9ms)
+  [1m[35mSearch Load (0.1ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 46ms (Views: 14.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/profiles/5" for 127.0.0.1 at 2014-06-12 18:36:31 -0700
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mProfile Load (0.1ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFavorite Load (0.1ms)[0m  [1mSELECT "favorites".* FROM "favorites" WHERE "favorites"."user_id" = ? AND "favorites"."star_id" = 5 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mConversation Load (0.1ms)[0m  SELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = ?  [["user_id", 1]]
+  [1m[36mProfile Load (0.1ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."user_id" = ? ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'likes' AND taggings.tagger_id IS NULL)  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = ? AND "taggings"."taggable_type" = ? AND (taggings.context = 'dislikes' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 5], ["taggable_type", "Profile"]]
+  Rendered profiles/show.html.erb within layouts/application (4.0ms)
+  [1m[35mSearch Load (0.1ms)[0m  SELECT "searches".* FROM "searches" WHERE "searches"."user_id" = ? ORDER BY "searches"."id" ASC LIMIT 1  [["user_id", 1]]
+Completed 200 OK in 15ms (Views: 11.0ms | ActiveRecord: 0.9ms)

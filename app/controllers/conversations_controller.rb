@@ -14,7 +14,7 @@ class ConversationsController < ApplicationController
   def create
     @profile = Profile.find(params[:id])
     
-    if current_user.conversations.last && DateTime.now - 24.hours > current_user.conversations.last.created_at
+    if current_user.conversations.last && DateTime.now - 1.day > current_user.conversations.last.created_at
       redirect_to profile_path(@profile)
     end
     

@@ -36,7 +36,7 @@ def show
     end
   end
   if current_user.conversations.last
-    if DateTime.now - 24.hours > current_user.conversations.last.created_at
+    if DateTime.now - 1.day > current_user.conversations.last.created_at
       @newcon = true
     else
       @newcon = false

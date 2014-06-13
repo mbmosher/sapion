@@ -5,7 +5,7 @@
 
 <% @profiles.each do |prof| %>
     <p>
-    <%= image_tag(prof.avatar.thumb.url) %>
+    <%= image_tag(prof.avatar.match.url) %>
 	<%= link_to prof.first_name,  profile_path(prof) %>
 	<%= prof.tagline %>
 	</p>
