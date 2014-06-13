@@ -62,13 +62,6 @@
 	  Yes <%= radio_button("profile", "kids", "true")  %>
 	  No <%= radio_button("profile", "kids", "false")  %></div>
 	
-	  <div><%= f.label :avatar %><br />
-	  <%= image_tag(@profile.avatar.thumb.url) %>
-	  <%= f.file_field :avatar %>
-      Remove Photo
-      <%= f.check_box :remove_avatar %>
-	  <%= f.hidden_field :avatar_cache %></div>
-	
 	<br />	
 	We automatically filter match results such that only people within people within 50 miles of you can see your profile.  If you would also like to set a limit on the age of people who can view your profile, do so here.
 	<br />

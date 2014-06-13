@@ -1,9 +1,10 @@
-require 'carrierwave/orm/activerecord'
+# require 'carrierwave/orm/activerecord'
 
 class Profile < ActiveRecord::Base
   belongs_to :user
+  has_many :photos
   
-  mount_uploader :avatar, AvatarUploader
+  # mount_uploader :avatar, AvatarUploader
   
   geocoded_by :zipcode # zipcode is an attribute of the Profile model
   after_validation :geocode, :if => :zipcode_changed?

@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
 
 def new
   @profile = Profile.new
-  @heights = (56..112).to_a.map { |inch| [ id: inch.to_s, name: (inch/12).floor.to_s+'\''+(inch%12).to_s ] }
+  # @heights = (56..112).to_a.map { |inch| [ id: inch.to_s, name: (inch/12).floor.to_s+'\''+(inch%12).to_s ] }
   
 end
 

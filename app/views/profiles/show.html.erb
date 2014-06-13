@@ -5,11 +5,32 @@
 <% end %>
 <p><%= @profile.tagline %></p>
 
-<div class="row">
-<p class="span8">
-<%= image_tag(@profile.avatar.url) %>
-</p>
-<p class="span4 offset8 vcenter">
+
+<% if @profile.photos.first %>
+
+<div class="diy-slideshow">
+	<% @profile.photos.each do |pic|%>
+	<% if pic == @profile.photos.first %>
+		<figure class="show">
+	<% else %>
+		<figure>
+	<% end %>
+		<%= image_tag(pic.avatar.url) %>
+		<% if pic.caption != "" %>
+		<figcaption><%= pic.caption %></figcaption> 
+		<% end %>
+	</figure>
+    <% end %>
+  <% if @profile.photos.count > 1 %>
+  <span class="prev">&laquo;</span>
+  <span class="next">&raquo;</span>
+  <% end %>
+</div>
+
+<% end %>
+
+
+<p class="vcenter">
 <%= @profile.bio %><br />
 <% if @profile.pets %>
 Has pets
@@ -26,7 +47,7 @@ doesn't have kids.
 <p>Likes: <%= @profile.like_list %></p>
 <p>Disikes: <%= @profile.dislike_list %></p>
 	
-</div>
+
 
 <% if current_user.id == @profile.user_id %>
 <div class="row">
@@ -34,6 +55,8 @@ doesn't have kids.
 <%= link_to 'Edit Profile', edit_profile_path(@profile), class: "btn"  %>
 
 <%= link_to 'Edit Account', edit_user_registration_path(current_user), class: "btn"  %>
+
+<%= link_to "Edit Photos", profile_photos_path(@profile), class: 'btn' %>
 
 <% else %>
 
@@ -56,3 +79,38 @@ doesn't have kids.
 </p>
 </div>
 <% end %>
+
+<script type="text/javascript">
+(function(){
+  
+var counter = 0, // to keep track of current slide
+    $items = document.querySelectorAll('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+    numItems = $items.length; // total number of slides
+
+// this function is what cycles the slides, showing the next or previous slide and hiding all the others
+var showCurrent = function(){
+  var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+  
+  // remove .show from whichever element currently has it 
+  // http://stackoverflow.com/a/16053538/2006057
+  [].forEach.call( $items, function(el){
+    el.classList.remove('show');
+  });
+  
+  // add .show to the one item that's supposed to have it
+  $items[itemToShow].classList.add('show');    
+};
+
+// add click events to prev & next buttons 
+document.querySelector('.next').addEventListener('click', function() {
+     counter++;
+     showCurrent();
+  }, false);
+
+document.querySelector('.prev').addEventListener('click', function() {
+     counter--;
+     showCurrent();
+  }, false);
+  
+})();
+</script>

@@ -1,0 +1,15 @@
+<br /><p><%= image_tag(@photo.avatar.url) %></p>
+<%= form_for [@profile, @photo], :html => {:multipart => true}  do |f| %>
+	
+	<%= f.hidden_field :profile_id %>
+	
+	<div><%= f.label :caption%><br />
+		<%= f.text_field :caption%></div>
+		
+	<div><%= f.file_field :avatar %>
+		    <%= f.label :remote_image_url, "or image URL" %><br />
+		    <%= f.text_field :remote_avatar_url %></div>
+		
+	<div><%= f.submit %></div>
+<% end %>
+<%= link_to "Back", profile_photos_path(@profile), class: 'btn' %>

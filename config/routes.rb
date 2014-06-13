@@ -9,7 +9,9 @@ Sapion::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
   
-  resources :profiles
+  resources :profiles do
+    resources :photos
+  end
   
   resources :conversations do
     resources :messages

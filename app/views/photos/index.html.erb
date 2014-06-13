@@ -1,0 +1,33 @@
+<h1>My Photos</h1>
+
+<% if @photos %>
+	<% @photos.each do |photo| %>
+	    <p>
+		<%= image_tag(photo.avatar.url) %><br />
+		<%= photo.caption %><br />
+		<%= link_to "Edit Photo", edit_profile_photo_path(@profile, photo), class: 'btn' %>
+		<%= link_to "Delete Photo", profile_photo_path(@profile, photo), method: :delete, class: 'btn'  %>
+		</p>
+	<% end %>
+<% end %>
+
+<% if @photos == nil || @photos.count < 5 %>
+<P>Add new photo</p>
+		<%= form_for [@profile, @profile.photos.build], :html => {:multipart => true} do |f| %>
+			
+			<%= f.hidden_field :profile_id %>
+
+			<div><%= f.file_field :avatar %>
+				<%= f.label :remote_image_url, "or image URL" %><br />
+				    <%= f.text_field :remote_avatar_url %></div>
+				
+				
+			<div><%= f.label :caption%><br />
+				<%= f.text_field :caption%></div>
+
+
+			<div><%= f.submit %></div>
+		<% end %>
+<% end %>
+
+<%= link_to "Back", profile_path(@profile), class: 'btn' %>
