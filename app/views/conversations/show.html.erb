@@ -2,6 +2,12 @@
 
 <% if current_user.id == @converse.initiator || current_user.id == @converse.mark %>
 
+<% if !@converse.messages.first %>
+<p>
+Need a conversation starter? Try: <%= @suggest %>
+</p>
+<% end %>
+
 <%= form_for([@converse, @converse.messages.build]) do |f| %>
   <div class="form-inline">
     New Message
@@ -13,7 +19,9 @@
 <% @converse.messages.order(created_at: :desc).each do |mess| %>
   <% if mess.text %>
 	<p>
-		<%= image_tag(mess.user.profile.avatar.thumb.url) %>
+		<% if mess.user.profile.photos.first.avatar %>
+		<%= image_tag(mess.user.profile.photos.first.avatar.thumb.url) %>
+		<% end %>
 		<strong><%= link_to mess.user.profile.first_name,  profile_path(mess.user.profile) %>:</strong>
 		<%= mess.text%>
 	</p>
@@ -25,3 +33,4 @@
 <% else %>
 <p>That's not your conversation!</p>
 <% end %>
+

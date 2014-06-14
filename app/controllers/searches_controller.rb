@@ -121,7 +121,8 @@ class SearchesController < ApplicationController
       @profiles = @kids
     end
 
-    
+    # User.tagged_with("awesome", "cool", :any => true, :order_by_matching_tag_count => true)  
+    # Sort by users who match the most tags, descending
     
   end
   

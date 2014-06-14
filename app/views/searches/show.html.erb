@@ -5,7 +5,9 @@
 
 <% @profiles.each do |prof| %>
     <p>
-    <%= image_tag(prof.avatar.match.url) %>
+	<% if prof.photos.first %>
+    <%= image_tag(prof.photos.first.avatar.match.url) %>
+    <% end %>
 	<%= link_to prof.first_name,  profile_path(prof) %>
 	<%= prof.tagline %>
 	</p>

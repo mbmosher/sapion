@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
          
   has_one :profile, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  has_many :messages
-  has_many :conversations, :through => :messages, dependent: :destroy
-  # has_many :messages
+  has_many :messages, dependent: :destroy
+  has_many :interactions
+  has_many :conversations, :through => :interactions, dependent: :destroy
   has_one :search, dependent: :destroy
 end

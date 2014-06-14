@@ -25,7 +25,7 @@ class FavoritesController < ApplicationController
 
     def index
       @favs = []
-      current_user.favorites.each do |fav|
+      current_user.favorites.order(created_at: :desc).each do |fav|
         @favs << Profile.find(fav.star_id)
       end
     end
