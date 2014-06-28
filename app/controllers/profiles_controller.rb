@@ -20,6 +20,9 @@ def create
   @profile.subscribed = false
   
   if @profile.save
+    @photo = Photo.new
+    @photo.profile_id = @profile.id
+    @photo.save
     redirect_to @profile
   else
     render 'new'

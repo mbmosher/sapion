@@ -3,7 +3,7 @@
 <% if @photos %>
 	<% @photos.each do |photo| %>
 	    <p>
-		<%= image_tag(photo.avatar.url) %><br />
+		<%= image_tag(photo.avatar.match.url) %><br />
 		<%= photo.caption %><br />
 		<%= link_to "Edit Photo", edit_profile_photo_path(@profile, photo), class: 'btn' %>
 		<%= link_to "Delete Photo", profile_photo_path(@profile, photo), method: :delete, class: 'btn'  %>
@@ -26,7 +26,7 @@
 				<%= f.text_field :caption%></div>
 
 
-			<div><%= f.submit %></div>
+			<div><%= f.submit "Upload Photo", class: 'btn' %></div>
 		<% end %>
 <% end %>
 
